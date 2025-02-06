@@ -21,3 +21,5 @@ void months();
 void degreesDirection();
 
 void testColor();
+
+int getnum2();

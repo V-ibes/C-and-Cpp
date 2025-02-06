@@ -9,7 +9,17 @@
 #include "enum.h"
 using namespace std;
 
-
+enum enColors {
+	BLACK = 0,
+	RED,
+	YELLOW,
+	PURPLE,
+	GREEN,
+	BROWN,
+	BLUE,
+	WHITE,
+	COLOR_COUNT,
+};
 
 
 void direction() {
@@ -191,7 +201,7 @@ void wrtColor(enColors color) {
 	};
 
 
-	Color colors[] = {
+	color colors[] = {
 		{0, 0, 0},     // BLACK
 		{1, 0, 0},     // RED
 		{1, 1, 0},     // YELLOW
@@ -219,5 +229,15 @@ void testColor() {
 }
 
 
+int getnum2() {
+	int num = 0;
+	int  d = 10;
+	char ch;
 
+	while (isdigit(ch = getchar())) {
+		num = num * 10 + ch - '0';
+	}
+	ungetc(ch, stdin);
+	return num;
+}
 
